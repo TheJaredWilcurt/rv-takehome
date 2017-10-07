@@ -1,0 +1,2 @@
+Without this file github.io ignores files and folders that start with _
+It also causes 30 second waits before content is updated on the live version after a push.
