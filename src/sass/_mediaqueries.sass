@@ -1,0 +1,26 @@
+
+// Media Queries that alter the styles on the page depending on browser width
+
+@media screen and (max-width: 980px)
+    .card,
+    .half,
+    .community .half
+        width: 100%
+
+// sass-lint:disable indentation
+
+@media screen and (max-width: 700px)
+    .thirds
+        width: 100%
+
+@media screen and (max-width: 590px)
+    header h1
+        font-size: 2em
+
+@media screen and (max-width: 450px)
+    .card-header span
+        display: block
+        text-align: right
+        float: none
+
+// sass-lint:enable indentation
