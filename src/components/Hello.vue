@@ -22,32 +22,28 @@
 
 <script>
 export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    name: 'hello',
+    data () {
+        return {
+            msg: 'Welcome to Your Vue.js App'
+        }
     }
-  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
+<style lang="sass">
+h1,
+h2
+    font-weight: normal
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+ul
+    list-style-type: none
+    padding: 0px
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+li
+    display: inline-block
+    margin: 0px 10px
 
-a {
-  color: #42b983;
-}
+a
+    color: #42B983
 </style>
