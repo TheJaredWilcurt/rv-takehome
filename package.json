@@ -93,5 +93,11 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 11"
+  ],
+  "pre-commit": [
+    "lint",
+    "sasslint",
+    "unit",
+    "e2e"
   ]
 }
