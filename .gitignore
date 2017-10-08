@@ -7,6 +7,8 @@ yarn-error.log*
 test/unit/coverage
 test/e2e/reports
 selenium-debug.log
+static/**/*.map
+_assets/**/*
 
 # Editor directories and files
 .idea
@@ -14,3 +16,5 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
+
+_assets/unused/ss-pika/license.txt
