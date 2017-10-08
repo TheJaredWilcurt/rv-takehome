@@ -3,12 +3,12 @@
 
 @import "_var.sass"
 
-@mixin bmp0
+=bmp0
     border: 0px
     margin: 0px
     padding: 0px
 
-@mixin noselect
+=noselect
     -webkit-touch-callout: none
     -webkit-user-select: none
     -khtml-user-select: none
@@ -16,16 +16,33 @@
     -ms-user-select: none
     user-select: none
 
-@mixin translate3d($x, $y, $z)
+=translate3d($x, $y, $z)
     -webkit-transform: translate3d($x, $y, $z)
     -moz-transform: translate3d($x, $y, $z)
     -ms-transform: translate3d($x, $y, $z)
     -o-transform: translate3d($x, $y, $z)
     transform: translate3d($x, $y, $z)
 
-@mixin translate($x, $y)
+=translate($x, $y)
     -webkit-transform: translate($x, $y)
     -moz-transform: translate($x, $y)
     -ms-transform: translate($x, $y)
     -o-transform: translate($x, $y)
     transform: translate($x, $y)
+
+=font-light
+    font-family: $commonFont
+    font-weight: 300
+
+=font-regular
+    font-family: $commonFont
+    font-weight: 400
+
+=font-semi
+    font-family: $commonFont
+    font-style: italic
+    font-weight: 600
+
+=font-bold
+    font-family: $commonFont
+    font-weight: 700
