@@ -121,6 +121,7 @@ rules:
         - list-style-type
         - text-align
         - text-decoration
+        - text-decoration-skip
         - text-shadow
         - unicode-bidi
         # Less common properties go to the bottom
