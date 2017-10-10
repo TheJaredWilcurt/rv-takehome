@@ -5,7 +5,57 @@
 @import "_mixins.sass"
 @import "_functions.sass"
 
-header .quick-bar
-    background: $brandColor
-    a
-        color: $backgroundColor
+header
+    margin-bottom: 6px
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5)
+    .quick-bar
+        background: $brandColor
+        padding: 0px
+        font-size: 12px
+        line-height: 42px
+        text-align: right
+        vertical-align: middle
+        a
+            color: $backgroundColor
+        .icon
+            width: 13px
+            vertical-align: middle
+    .quick-link
+        margin: 0px 0px 0px 47px
+
+    .header-nav
+        +font-bold
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 101px
+        font-size: 15px
+        text-align: right
+    .logo-container
+        display: inline-block
+        float: left
+        img
+            width: 231px
+    .main-navigation
+        display: inline-block
+        a
+            display: inline-block
+            border: 1px solid transparent
+            border-radius: 3px
+            margin: 0px 17px
+            padding: 6px 8px
+            color: $brandColor
+            transition: 0.15s ease all
+            &:hover
+                border: 1px solid $altColor
+    .find-pro
+        background: $backgroundColor
+        border: 1.49px solid $brandAccent
+        border-radius: 3px
+        margin: 0px 0px 0px 54px
+        padding: 14px 20px
+        color: $brandAccent
+        white-space: nowrap
+        img
+            height: 16px
+            vertical-align: bottom

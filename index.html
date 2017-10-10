@@ -18,25 +18,33 @@
   <body>
     <header>
       <nav class="quick-bar">
-        <a href="#">Dealers and Distributors</a>
-        <a href="#">Commercial Service <img src="./static/images/external.svg" class="icon" alt="Icon indicating that this is an external link"></a>
+        <div class="wrapper">
+          <span class="quick-link"><a href="#">Dealers and Distributors</a></span>
+          <span class="quick-link"><a href="#">Commercial Service <img src="./static/images/external.svg" class="icon" alt="Icon indicating that this is an external link"></a></span>
+        </div>
       </nav>
-      <div class="logo-container">
-        <a href="#"><img src="./static/images/logo.png" alt="PoolPros logo"></a>
+      <div class="wrapper header-nav">
+        <div class="logo-container">
+          <a href="#"><img src="./static/images/logo.png" alt="PoolPros logo"></a>
+        </div>
+        <div>
+          <nav class="main-navigation">
+            <a href="#">Pools &amp; Spas</a>
+            <a href="#">Supplies</a>
+            <a href="#">Resources</a>
+            <a href="#">Services</a>
+          </nav>
+          <button class="find-pro">
+            <img src="./static/images/mappin.svg" class="icon" alt="Icon of a map pin">
+            Find a Pool Pro
+          </button>
+        </div>
       </div>
-      <nav class="main-navigation">
-        <a href="#">Pools &amp; Spas</a>
-        <a href="#">Supplies</a>
-        <a href="#">Resources</a>
-        <a href="#">Services</a>
-      </nav>
-      <button class="find-pro">
-        <img src="./static/images/mappin.svg" class="icon" alt="Icon of a map pin">
-        Find a Pool Pro
-      </button>
     </header>
 
-    <div id="app"></div>
+    <main id="app">
+      <!-- App.vue -->
+    </main>
 
     <footer>
       <div>

@@ -3,3 +3,4 @@ config/*.js
 src/sass/*.sass
 src/sass/*.scss
 test/unit/coverage/**/*
+src/static/**/*
