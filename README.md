@@ -33,6 +33,7 @@ The `master` branch containd the source code for this project. The live version 
 
 * Vue.js
 * Vue-Router
+* Axios
 * Vue-CLI
 * Webpack
 * Sass
