@@ -7,13 +7,14 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
-    "build": "node build/build.js",
+    "build": "node build/build.js && npm run ghpages",
     "dist": "cd dist && node ../node_modules/npm-free-server/dist/server.js",
+    "ghpages": "node config/ghpages.js",
     "report": "npm run build --report",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src/**/* test/**/*",
+    "lint": "eslint --ext .js,.vue src/**/* test/**/* config/**/*",
     "sasslint": "node ./config/sasslinter.js"
   },
   "dependencies": {
