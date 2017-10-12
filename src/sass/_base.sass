@@ -63,3 +63,59 @@ img
 
 strong
     font-weight: bold
+
+[type="checkbox"]
+    &:checked,
+    &:not(:checked)
+        position: absolute
+        left: -9999px
+        + label
+            +font-regular
+            +noselect
+            position: relative
+            display: inline-block
+            margin: 0px 0px 0px 39px
+            padding-left: 33px
+            font-size: 12px
+            line-height: 23px
+            cursor: pointer
+            &:before,
+            &:after
+                content: ''
+                position: absolute
+                transition: 0.25s ease all
+            &:before
+                top: 0px
+                left: 0px
+                width: 23px
+                height: 23px
+                background: #FFF
+                border: 1px solid $grayAccent
+                border-radius: 4px
+            &:after
+                top: 8px
+                left: 8px
+                width: 7px
+                height: 7px
+                background: #F6F6F6
+                opacity: 1.0
+                transform: scale(1)
+    &:checked + label:before
+        background: $brandAccent
+        border-color: $brandAccent
+    &:not(:checked) + label:after
+        opacity: 0.0
+        transform: scale(0)
+    &:disabled
+        &:checked,
+        &:not(:checked)
+            + label:before
+                background-color: #EEE
+                border-color: #CCC
+        &:checked + label:after
+            background: #AAA
+    &:focus
+        &:checked + label:before
+            border-color: darken($brandAccent, 25%)
+        &:not(:checked) + label:before
+            border-color: darken($grayAccent, 25%)

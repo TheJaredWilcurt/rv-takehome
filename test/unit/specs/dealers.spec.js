@@ -6,6 +6,6 @@ describe('dealers.vue', function () {
         var Constructor = Vue.extend(dealers);
         var vm = new Constructor().$mount();
         expect(vm.$el.querySelector('.well').textContent)
-             .to.equal('\n      0 dealers in area');
+             .to.equal('0 dealers in area  Filter Results  Service  Installation  Residential  Commercial ?');
     });
 });

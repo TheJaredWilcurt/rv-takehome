@@ -9,9 +9,9 @@ options:
   max-warnings: 50
 # File Options
 files:
-  include: 'sass/**/*.s+(a|c)ss'
+  include: 'src/sass/**/*.s+(a|c)ss'
   ignore:
-    - 'sass/vendor/**/*.*'
+    - 'src/sass/vendor/**/*.*'
 # Rule Configuration
 rules:
   extends-before-mixins: 2
@@ -74,6 +74,7 @@ rules:
         - background
         - background-color
         - background-image
+        - background-position
         - background-repeat
         # Box model
         - border
