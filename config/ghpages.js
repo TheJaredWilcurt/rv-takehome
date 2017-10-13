@@ -36,6 +36,8 @@ var ghpages = {
                     data = data.split('url(/static/').join('url(../');
                 } else if (isHTML) {
                     data = data.split('=/').join('=');
+                } else if (isJS) {
+                    data = data.split('src:"../static/images/').join('src:"./static/images/');
                 }
                 data = this.ensureEmptyReturn(data);
                 fs.writeFileSync(fullFile, data);
