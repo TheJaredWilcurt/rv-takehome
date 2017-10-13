@@ -39,3 +39,56 @@
         background: #F1830E
         a
             color: #F7FD00
+
+$card-margin: 9px
+$card-radius: 10px
+.card
+    display: inline-block
+    width: calc(33.3333% - #{$card-margin * 2})
+    border-radius: $card-radius
+    margin: 10px $card-margin
+    padding: 8px 0px 0px 0px
+    font-size: 18px
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3)
+    vertical-align: top
+
+.card-header
+    +font-light
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 96px
+    border-bottom: 2px solid #ECECEC
+    margin: 0px 18px
+    font-size: 26px
+    text-align: center
+
+.card-footer
+    background: $wellColor
+    border-radius: 0px 0px $card-radius $card-radius
+    padding: 29px 47px
+    font-size: 13px
+    .half
+        margin-top: 15px
+    .half:nth-of-type(1),
+    .half:nth-of-type(2)
+        margin-top: 0px
+
+.phone-icon
+    width: 28px
+    height: 28px
+    background: $brandAccent
+    border-radius: 50%
+    margin: 0px 13px 0px 0px
+    padding: 7px
+
+.email-icon
+    width: 15px
+    margin: 0px 8px 0px 0px
+    vertical-align: -1px
+
+.certification-icon
+    max-width: 13px
+    max-height: 13px
+    margin: 0px 6px 0px 0px
+    vertical-align: bottom

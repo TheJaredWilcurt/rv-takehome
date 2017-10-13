@@ -13,7 +13,7 @@ module.exports = {
             .waitForElementVisible('#app', 5000)
             .assert.elementPresent('.well')
             .assert.containsText('.well', '7 dealers in 28205')
-            .assert.elementCount('img', 7)
+            .assert.elementCount('img', 44)
             .end();
     }
 };
