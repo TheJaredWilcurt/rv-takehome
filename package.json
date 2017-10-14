@@ -5,10 +5,12 @@
   "author": "The Jared Wilcurt <TheJaredWilcurt@users.noreply.github.com>",
   "private": true,
   "scripts": {
-    "start": "node ./node_modules/npm-free-server/dist/server.js"
+    "start": "node ./node_modules/npm-free-server/dist/server.js",
+    "update": "node update-files.js"
   },
   "dependencies": {},
   "devDependencies": {
+    "fs-extra": "^4.0.2",
     "npm-free-server": "^1.1.0",
     "pre-commit": "^1.2.2"
   },
