@@ -89,10 +89,14 @@ export default {
     methods: {
         filterResults: function () {
             this.filteredDealers = {};
+            var dealersLength = this.dealers.length;
             for (var filter in this.filters) {
+                var filteredLength = Object.keys(this.filterResults).length;
+                var filteredListIsFull = filteredLength === dealersLength;
+
                 // There is no reason to loop over all dealers and all certs
                 // for disabled filters or if the filtered results already contain all possible results
-                if (this.filters[filter] && !Object.keys(this.filterResults).length === this.dealers.length) {
+                if (this.filters[filter] && !filteredListIsFull) {
                     this.dealers.forEach(function (dealer) {
                         dealer.certifications.forEach(function (certification) {
                             if (certification.toLowerCase().startsWith(filter)) {
