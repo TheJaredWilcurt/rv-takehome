@@ -5,16 +5,16 @@
     </div>
     <div v-if="!requestFailed">
       <div class="well">
-        <div class="dealer-results-area">{{ dealers.length }} dealer<span v-if="dealers.length !== 1">s</span> in <span v-if="zipcode">{{ zipcode }}</span><span v-else>area</span></div>
+        <div class="dealer-results-area">{{ Object.keys(filteredDealers).length }} dealer<span v-if="Object.keys(filteredDealers).length !== 1">s</span> in <span v-if="zipcode">{{ zipcode }}</span><span v-else>area</span></div>
         <div class="separator"></div>
         <div>Filter Results</div>
-        <input type="checkbox" checked id="filter-service" v-model="filters.service" @click="filterResults">
+        <input type="checkbox" checked id="filter-service" v-model="filters.service" @change="filterResults">
         <label for="filter-service">Service</label>
-        <input type="checkbox" checked id="filter-installation" v-model="filters.installation" @click="filterResults">
+        <input type="checkbox" checked id="filter-installation" v-model="filters.installation" @change="filterResults">
         <label for="filter-installation">Installation</label>
-        <input type="checkbox" checked id="filter-residential" v-model="filters.residential" @click="filterResults">
+        <input type="checkbox" checked id="filter-residential" v-model="filters.residential" @change="filterResults">
         <label for="filter-residential">Residential</label>
-        <input type="checkbox" id="filter-commercial" v-model="filters.commercial" @click="filterResults">
+        <input type="checkbox" id="filter-commercial" v-model="filters.commercial" @change="filterResults">
         <label for="filter-commercial">Commercial</label>
         <span class="question-mark-box">?</span>
       </div>
@@ -89,19 +89,19 @@ export default {
     methods: {
         filterResults: function () {
             this.filteredDealers = {};
-            this.dealers.forEach(function (dealer) {
-                dealer.certifications.forEach(function (certification) {
-                    if (this.filters.service && certification === 'Service Pro') {
-                        this.filteredDealers[dealer.companyID] = dealer;
-                    } else if (this.filters.installation && certification === 'Installation Pro') {
-                        this.filteredDealers[dealer.companyID] = dealer;
-                    } else if (this.filters.residential && certification === 'Commercial Pro') {
-                        this.filteredDealers[dealer.companyID] = dealer;
-                    } else if (this.filters.commercial && certification === 'Residential Pro') {
-                        this.filteredDealers[dealer.companyID] = dealer;
-                    }
-                }.bind(this));
-            }.bind(this));
+            for (var filter in this.filters) {
+                // There is no reason to loop over all dealers and all certs
+                // for disabled filters or if the filtered results already contain all possible results
+                if (this.filters[filter] && !Object.keys(this.filterResults).length === this.dealers.length) {
+                    this.dealers.forEach(function (dealer) {
+                        dealer.certifications.forEach(function (certification) {
+                            if (certification.toLowerCase().startsWith(filter)) {
+                                this.filteredDealers[dealer.companyID] = dealer;
+                            }
+                        }.bind(this));
+                    }.bind(this));
+                }
+            }
         },
         businessHours: function (weekHours) {
             for (var key in weekHours) {
@@ -215,6 +215,7 @@ $question-box-size: 19px
 
 .card-container
     margin-top: 20px
+    text-align: center
 
 .phone-number
     +font-bold

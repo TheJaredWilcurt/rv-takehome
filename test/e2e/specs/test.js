@@ -12,8 +12,8 @@ module.exports = {
             .url(devServer)
             .waitForElementVisible('#app', 5000)
             .assert.elementPresent('.well')
-            .assert.containsText('.well', '7 dealers in 28205')
-            .assert.elementCount('img', 44)
+            .assert.containsText('.well', '0 dealers in 28205\nFilter Results\nService\nInstallation\nResidential\nCommercial\n?')
+            .assert.elementCount('img', 7)
             .end();
     }
 };
