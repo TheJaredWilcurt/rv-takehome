@@ -6,7 +6,7 @@
 
 ## Live version
 
-The `master` branch containd the source code for this project. The live version is on the `gh-pages` branch and can be viewed here:
+The `master` branch contains the source code for this project. The live version is on the `gh-pages` branch and can be viewed here:
 
 * http://TheJaredWilcurt.com/rv-takehome
 * https://github.com/TheJaredWilcurt/rv-takehome/tree/gh-pages
