@@ -13,19 +13,24 @@ The `master` branch containd the source code for this project. The live version 
 
 * * *
 
-## To run locally:
+## To run locally for development:
 
 1. Install [Node.js & NPM](https://nodejs.org)
 1. Clone or download this repo
 1. Run `npm install`
 1. Run `npm start`
 
-## To build:
+## To build and publish:
 
 1. Install [Node.js & NPM](https://nodejs.org)
 1. Clone or download this repo
 1. Run `npm install`
 1. `npm run build`
+1. `git checkout gh-pages`
+1. `npm run update`
+1. `git add -A`
+1. `git commit -m "Update"`
+1. `git push origin gh-pages`
 
 * * *
 
