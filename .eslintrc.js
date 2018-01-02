@@ -1,21 +1,21 @@
 
 module.exports = {
-    root: true,
-    parser: 'babel-eslint',
-    parserOptions: {
-        sourceType: 'module'
+    'root': true,
+    'parser': 'babel-eslint',
+    'parserOptions': {
+        'sourceType': 'module'
     },
-    env: {
-        browser: true,
-        node: true
+    'env': {
+        'browser': true,
+        'node': true
     },
     // required to lint *.vue files
-    plugins: [
+    'plugins': [
         'html'
     ],
-    extends: 'eslint:recommended',
+    'extends': 'eslint:recommended',
     // add your custom rules here
-    rules: {
+    'rules': {
         // allow debugger during development
         'brace-style':                 ['error', '1tbs', { 'allowSingleLine': true }],
         'comma-dangle':                ['error', 'never'],
